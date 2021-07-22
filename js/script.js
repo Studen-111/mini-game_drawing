@@ -7,15 +7,13 @@ for (let i = 0; i < SQUARES_NUMBER; i++) {
     square.classList.add('square');
 
     square.addEventListener('mouseover', () => setColor(square));
-
     square.addEventListener('mouseleave', () => removeColor(square));
 
     board.append(square);
 }
 
 function setColor(element) {
-    const color = getRandomColor();
-    element.style.backgroundColor = color;
+    element.style.backgroundColor = getRandomColor();
     element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
 }
 
